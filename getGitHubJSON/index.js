@@ -1,6 +1,6 @@
 module.exports = async function (context, myTimer) {
     const timeStamp = new Date().toISOString();
-    let gitHubAPI = "https://api.github.com/users/aplusandminus/repos";
+    let gitHubAPI = "https://api.github.com/users/aplusandminus/repos?per_page=30&sort=created_at&direction=desc&fields=id,owner,url,description,language,watchers_count,created_at";
 
     try {
         const data = JSON.stringify(gitHubAPI);
